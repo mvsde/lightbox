@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@mvsde/lightbox</title>
+
+    <script type="module">
+      import { Lightbox, LightboxLink } from '/src/main.js'
+
+      const lightbox = new Lightbox({
+        element: document.querySelector('#lightbox')
+      })
+
+      lightbox.init()
+
+      const lightboxLinks = document.querySelectorAll('.js-lightbox-link')
+
+      for (const link of lightboxLinks) {
+        new LightboxLink({ element: link, target: lightbox }).init()
+      }
+    </script>
+
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+    </style>
+  </head>
+  <body>
+
+    <a
+      class="js-lightbox-link"
+      href="https://source.unsplash.com/NRQV-hBF10M/2000x1300"
+      data-alt="River in the foreground cutting through grassland. Pine trees in the middle ground slightly obscured by mist. Large mountains to the left and right in the background, framing a pale orange sky at dawn."
+      data-caption="Photo by <a href='https://unsplash.com/photos/NRQV-hBF10M'>Bailey Zindel on Unsplash</a>."
+    >
+      Yosemite valley at dawn
+    </a>
+
+    <div
+      id="lightbox"
+      class="lightbox"
+    >
+      <div class="lightbox__inner">
+
+        <button
+          class="lightbox__close"
+          aria-label="Close image"
+        >×</button>
+
+        <figure class="lightbox__figure">
+          <img class="lightbox__image">
+          <figcaption class="lightbox__caption"></figcaption>
+        </figure>
+
+      </div>
+    </div>
+
+  </body>
+</html>

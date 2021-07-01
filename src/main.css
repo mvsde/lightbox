@@ -1,0 +1,55 @@
+.lightbox {
+  --transition-duration: 0.3s;
+
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  visibility: hidden;
+  opacity: 0;
+
+  transition:
+    visibility var(--transition-duration),
+    opacity var(--transition-duration);
+}
+
+.lightbox.is-visible {
+  visibility: visible;
+  opacity: 1;
+}
+
+.lightbox__inner {
+  display: flex;
+  flex-direction: column;
+}
+
+.lightbox__figure {
+  min-width: 18rem;
+  margin: 0;
+}
+
+.lightbox__image {
+  opacity: 0;
+  transition: opacity 0.01s var(--transition-duration);
+}
+
+.lightbox__image.has-loaded {
+  opacity: 1;
+  transition: opacity 0.5s;
+}
+
+.lightbox__caption {
+  max-width: 42rem;
+}
+
+.lightbox__caption:empty {
+  display: none;
+}
+
+.lightbox__close {
+  align-self: flex-end;
+}
