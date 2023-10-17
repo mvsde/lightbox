@@ -31,16 +31,16 @@
   "style": "./dist/style.css",
   "devDependencies": {
     "@pangolinjs/eslint-config": "^5.2.1",
-    "@pangolinjs/stylelint-config": "^2.0.6",
+    "@pangolinjs/stylelint-config": "^4.0.0",
     "eslint": "^7.29.0",
     "eslint-config-standard": "^16.0.3",
     "eslint-plugin-import": "^2.23.4",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^5.1.0",
     "focus-trap": "^6.5.1",
-    "stylelint": "^13.13.1",
-    "stylelint-order": "^4.1.0",
-    "stylelint-scss": "^3.19.0",
+    "stylelint": "^15.10.3",
+    "stylelint-order": "^6.0.3",
+    "stylelint-scss": "^5.2.1",
     "vite": "^2.9.16"
   },
   "peerDependencies": {
